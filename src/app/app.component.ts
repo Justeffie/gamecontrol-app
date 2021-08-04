@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'gamecontrol-app';
+  numerosPares: number[] = [];
+  numerosImpares: number[] = [];
+
+  onInternalFired(firedNumber: number) {
+      if (firedNumber % 2 === 0) {
+        this.numerosPares.push(firedNumber);
+      } else {
+        this.numerosImpares.push(firedNumber);
+      }
+  }
 }
